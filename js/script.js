@@ -7,7 +7,7 @@
 
 4. al click della croce eliminare il task se fatto, altrimenti scrivere un messaggio di errore //yes
 
-5. dopo aver scritto il task con invio o al click del bottone aggiungere il nuovo task (come non fatto) in cima all’elenco dei task //
+5. dopo aver scritto il task con invio o al click del bottone aggiungere il nuovo task (come non fatto) in cima all’elenco dei task // yes
 
 6. verificare la lunghezza minima del nuovo task
 7. se l’elenco è vuoto non mostrare la lista ma mostrare il messaggio “Non ci sono task”
@@ -57,10 +57,13 @@ elimina(index){
  }
 },
 addElement(){
-  this.tasks.unshift(this.inner)
-
-}
-
+  if(this.inner.length <= 5){
+    this.errore ='Devi inserire più 5 caratteri'
+  }else{
+    this.errore=''
+     this.tasks.unshift({text:this.inner,done:false})    
+  }
+},
 
 }
 

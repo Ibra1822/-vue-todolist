@@ -3,12 +3,25 @@
   padding: 0;
   box-sizing: border-box;
 }
+body{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: darkcyan;
+}
+
+h3{
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  font-size: 1.4rem;
+}
 
 .container{
 width: 70%;
 background-color: cadetblue;
 margin: 50px auto;
 padding: 10px;
+border-radius: 20px;
+box-shadow: 0px 0px 20px #000;
 }
 
 .logo{
@@ -17,7 +30,10 @@ justify-content: center;
 }
 
 .logo img{
- height: 50px;
+ height: 70px;
+ box-shadow: 0px 0px 10px #fff;
+  border-radius: 100px;
+  padding: 10px;
 }
 
 .inner{
@@ -30,17 +46,22 @@ justify-content: center;
   margin: 0px 5px;
   border-radius: 10px;
   border: 1px solid black;
+  box-shadow: 0px 0px 10px #fff;
 }
 
 .inner button{
   border: 1px solid black;
   border-radius: 10px;
   padding: 5px;
+  box-shadow: 0px 0px 10px #fff;
 }
 
 .content{
+  margin: 30px auto;
   width: 100%;
   border: 1px solid white;
+  padding: 5px;
+  border-radius: 20px;
 }
 
 .content ul{
@@ -54,6 +75,7 @@ justify-content: center;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-radius: 20px;
 }
 .content ul li span{
   cursor: pointer;

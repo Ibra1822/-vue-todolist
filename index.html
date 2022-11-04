@@ -23,25 +23,27 @@
   </div>
 
 <div class="inner">
-  <input type="text" v-model="inner" >
-  <button @click="addElement()" >Aggiungi</button>
+  <input type="text" v-model.trim="inner" @keyup.enter="addElement()">
+  <button @click="addElement()">Aggiungi</button>
   <p class="errore">{{errore}}</p>
 </div>
 
 <div class="content">
 
-  <ul>
-    <li v-for="(task, index) in tasks"
-    >
+  <ul v-if="tasks.length > 0" >
+
+    <li v-for="(task, index) in tasks" >
     <span 
     :class="{line: task.done}"
     @click="lineToggle(index)"
     >{{task.text}}</span>
+
       <i @click="elimina(index)" class="fa-solid fa-x"></i>
+
       </li>
  
   </ul>
-  <!-- <h3>Fatto Tutto</h3> -->
+   <h3 v-else >Non ci sono task  &#128526; </h3>   
 
 </div>
 </div>
